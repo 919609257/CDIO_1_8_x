@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login.html</title>
+    <style >
+    body
+    {
+      background-image: url('images/home/bg.jpg');
+    }
+    </style>	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+ 
+	<script type="text/javascript">
+	function loadimage() {
+			document.getElementById("randImage").src = "Image.jsp?" + Math.random();
+		}
+	</script>
+	
+
+</head>
+  
+  
+  <body >
+  <form method="post" >
+  <div><span>账号：</span>
+  <input type="text" name="username" id="username"/>
+  </div>
+  <div><span>密码：</span>
+  <input type="text" name="pwd" id="pwd"/>
+  </div>
+	<div>
+	<span>验证码：</span>
+	<input type="text" name="rand" size="15"> 
+	<img alt="code..." name="randImage" id="randImage" src="Image.jsp" width="60" height="20" border="1">  
+	<a href="javascript:loadimage();"><font class=pt95>看不清点我</font></a>
+	</div>
+  <div>
+  <input type="radio" name="usertype" value="rd_teacher"/>
+  <span>教师</span>
+  <input type="radio" name="usertype" value="rd_student" checked/>
+  <span>学生</span>
+  <input type="radio" name="usertype" value="rd_manager"/>
+  <span>管理员</span>
+  </div>
+  <input type="submit" value="登录" onclick="return checkInfo()">
+  </form>  
+  </body>
+</html>
